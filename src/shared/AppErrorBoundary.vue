@@ -10,6 +10,7 @@ onErrorCaptured((error) => {
   console.error("Unhandled application error:", error);
   return false;
 });
+const handleWindow = () => window.location.reload();
 </script>
 
 <template>
@@ -17,7 +18,9 @@ onErrorCaptured((error) => {
     <h1>Something went wrong</h1>
     <p>There was an unexpected application error.</p>
     <p v-if="errorMessage" class="state-card__subtle">{{ errorMessage }}</p>
-    <button type="button" class="button button--primary" @click="() => window.location.reload()">Reload app</button>
+    <button type="button" class="button button--primary" @click="handleWindow">
+      Reload app
+    </button>
   </main>
   <slot v-else />
 </template>
