@@ -6,6 +6,11 @@ import App from "./App.vue";
 import { router } from "./router";
 import { useAuthStore } from "./stores/auth";
 import "./styles.css";
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+import type { Plugin } from "vue";
+
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,8 +27,9 @@ const pinia = createPinia();
 const head = createHead();
 
 app.use(pinia);
+app.use(Toast as unknown as Plugin);
 
-// Kick off auth initialization before router starts processing routes
+
 const authStore = useAuthStore();
 authStore.initialize();
 
