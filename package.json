@@ -1,0 +1,32 @@
+{
+  "name": "altodo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^5.62.0",
+    "@vueuse/head": "^2.0.0",
+    "axios": "^1.7.9",
+    "pinia": "^2.2.6",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-typescript": "^14.1.4",
+    "eslint": "^9.16.0",
+    "eslint-plugin-vue": "^9.31.0",
+    "globals": "^15.13.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.2.0"
+  }
+}
